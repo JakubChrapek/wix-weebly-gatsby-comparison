@@ -8,6 +8,8 @@ const HeaderStyles = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 32px 24px;
+  max-width: 1440px;
+  margin: 0 auto;
   @media (min-width: 767px) {
     padding: 32px 60px;
     --mobile-nav-height: 120px;

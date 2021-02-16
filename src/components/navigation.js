@@ -119,6 +119,23 @@ const NavigationStyles = styled.nav`
       a {
         color: var(--white);
         font-size: 16px;
+        line-height: 1;
+        position: relative;
+        margin: 0 12px;
+
+        &:first-of-type {
+          margin: 0 12px 0 0;
+        }
+
+        &:last-of-type {
+          margin: 0 0 0 12px;
+        }
+
+        &:hover,
+        &.active {
+          color: var(--white);
+          background-color: unset;
+        }
       }
     }
 

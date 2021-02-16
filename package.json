@@ -5,7 +5,10 @@
   "description": "Weebly Wix Wordpress Comparison",
   "author": "jakubchrapek",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "wix",
+    "weebly",
+    "hero-section"
   ],
   "scripts": {
     "develop": "gatsby develop",
