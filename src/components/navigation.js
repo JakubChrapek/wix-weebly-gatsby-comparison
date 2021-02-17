@@ -94,15 +94,28 @@ const NavigationStyles = styled.nav`
       text-align: center;
       letter-spacing: 1px;
       transition: background-color 0.15s ease;
+      position: relative;
 
-      @media (min-width: 767px) {
-        font-size: 22px;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--white);
+        width: 100%;
+        height: 1px;
+        transform-origin: center;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
       }
 
       &:hover,
       &.active {
         color: var(--white);
         background-color: var(--black);
+      }
+      @media (min-width: 767px) {
+        font-size: 22px;
       }
     }
   }
@@ -131,10 +144,19 @@ const NavigationStyles = styled.nav`
           margin: 0 0 0 12px;
         }
 
+        &:focus-visible,
+        &:active {
+          outline: 2px solid var(--white);
+          outline-offset: -1px;
+        }
+
         &:hover,
         &.active {
           color: var(--white);
           background-color: unset;
+          &:after {
+            transform: scaleX(1);
+          }
         }
       }
     }

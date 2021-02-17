@@ -1,17 +1,17 @@
-import * as React from 'react';
 import { Link } from 'gatsby';
-import Layout from '../components/layout';
+import React from 'react';
 import FullPageBg from '../components/fullPageBg';
+import Layout from '../components/layout';
 
-const NotFoundPage = () => {
+const Events = () => {
   return (
     <Layout>
       <FullPageBg>
-        <h1>Oooops! Page not found!</h1>
+        <h1>Events page here</h1>
         <Link to="/">Go back to home</Link>
       </FullPageBg>
     </Layout>
   );
 };
 
-export default NotFoundPage;
+export default Events;

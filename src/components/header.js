@@ -10,24 +10,9 @@ const HeaderStyles = styled.header`
   padding: 32px 24px;
   max-width: 1440px;
   margin: 0 auto;
-  @media (min-width: 767px) {
-    padding: 32px 60px;
-    --mobile-nav-height: 120px;
-  }
-
   background-color: transparent;
   position: relative;
   z-index: 1;
-  a {
-    text-decoration: none;
-  }
-  > a {
-    &:focus,
-    &:active {
-      outline: 2px solid white;
-      outline-offset: 4px;
-    }
-  }
 
   h1 {
     font-size: 1.8rem;
@@ -35,6 +20,25 @@ const HeaderStyles = styled.header`
     line-height: 1em;
     font-weight: bold;
   }
+
+  a {
+    text-decoration: none;
+  }
+
+  > a {
+    padding: 18px 0;
+    &:focus-visible,
+    &:active {
+      outline: 2px solid white;
+      outline-offset: 4px;
+    }
+  }
+
+  @media (min-width: 767px) {
+    padding: 32px 60px;
+    --mobile-nav-height: 120px;
+  }
+
   @media (min-width: 1024px) {
     padding: 0 60px;
     height: var(--mobile-nav-height);
@@ -61,7 +65,6 @@ const Logo = ({ isNavigationOpened }) => {
 
 const Header = () => {
   const [isNavigationOpened, setIsNavigationOpened] = useState(false);
-
   return (
     <HeaderStyles>
       <Logo isNavigationOpened={isNavigationOpened} />
